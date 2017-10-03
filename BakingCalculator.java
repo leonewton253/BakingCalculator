@@ -26,8 +26,9 @@ public class BakingCalculator {
         double eggsP = (Math.ceil(eggs/12)); 
         double sugarP = (Math.ceil(sugar/2));   
         double chipsP = (Math.ceil(chips/2)); 
-    
-        //double cost = ((hops/2)*3.99) + malt*1.50 + yeast*2.59; 
+        double butterP = (Math.ceil(butter/4));
+
+        double cost = flourP*2.50 + saltP*1.09 + baking_sodaP*1.09 + vanillaP*3.99 + eggsP*1.59 + sugarP*1.99 + chipsP*3.99 + banana*0.16 + butterP*4.19;
         System.out.println(flourP + " Bag(s) of flour");
         System.out.println(saltP + " ounces of salt");
         System.out.println(baking_sodaP + " box(es) of baking soda");
@@ -37,7 +38,7 @@ public class BakingCalculator {
         System.out.println(butter +" package(s) of butter");
         System.out.println(banana +" banana(s)");
         System.out.println(chipsP +" bag(s) of chocolate chips");
-        //System.out.println("Total cost: "+"$"+cost);   
+        System.out.println("Total cost: "+"$"+cost);   
     }
 
 }
