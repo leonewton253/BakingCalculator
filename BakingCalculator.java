@@ -18,12 +18,12 @@ public class BakingCalculator {
     
         //Recipes//
         double flour = cookieCount*(2.25/48) +loafCount*1.5;
-        double salt = cookieCount/48 + loafCount/8;
+        double salt = cookieCount*(1.0/48.0) + loafCount*(1.0/8.0);
         double baking_soda = cookieCount*(1/48) + loafCount;
         double vanilla = cookieCount*(1/48) + loafCount;
         double eggs = cookieCount*(2/48) + loafCount;
         double sugar = cookieCount*(1.5/48) + loafCount*(3/4);
-        double butter  = cookieCount/48 + loafCount/3;
+        double butter  = cookieCount/48.0 + loafCount/3.0;
         double banana= loafCount*2;
         double chips = cookieCount*(2.5/48);  
         //Converting to packaged quantities//
@@ -35,8 +35,7 @@ public class BakingCalculator {
         double sugarP = sugar/2;   
         double chipsP = chips/2; 
         double butterP = butter/2;
-        
-        //Calculate cost of each package//
+         //Calculate cost of each package//
         double cost = flourP*2.50 + saltP*1.09 + baking_sodaP*1.09 + vanillaP*3.99 + eggsP*1.59 + sugarP*1.99 + chipsP*3.99 + banana*0.16 + butterP*4.19;
         //Output Shopping list with cost//
         System.out.println("Shopping list for "+cookieCount+" cookie(s)"+" and "+loafCount+" loaf(s) of bread:");
@@ -53,9 +52,6 @@ public class BakingCalculator {
         System.out.println();  
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         System.out.println("Total cost: " + formatter.format(cost));
-
-        
-
     }
 
 }
