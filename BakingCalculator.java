@@ -27,28 +27,27 @@ public class BakingCalculator {
         double banana= loafCount*2;
         double chips = cookieCount*(2.5/48);  
         //Converting to packaged quantities//
-        double flourP = (flour/3.33)/5;
-        double saltP = (salt/6.0)/26.0;
-        double baking_sodaP = (((baking_soda/6.0)/16.0)); 
-        double vanillaP = vanilla/6.0; 
-        double eggsP = eggs/12.0; 
-        double sugarP = sugar/2.0;   
-        double chipsP = chips/2.0; 
-        double butterP = butter/2.0;
+        double flourP = (int) Math.ceil((flour/3.33)/5);
+        double saltP = (int) Math.ceil((salt/6.0)/26.0);
+        double baking_sodaP =(int) Math.ceil(((baking_soda/6.0)/16.0)); 
+        double vanillaP = (int) Math.ceil(vanilla/6.0); 
+        double eggsP = (int) Math.ceil(eggs/12.0); 
+        double sugarP = (int) Math.ceil(sugar/2.0);   
+        double chipsP = (int) Math.ceil(chips/2.0); 
+        double butterP = (int) Math.ceil(butter/2.0);
          //Calculate cost of each package//
         double cost = flourP*2.50 + saltP*1.09 + baking_sodaP*1.09 + vanillaP*3.99 + eggsP*1.59 + sugarP*1.99 + chipsP*3.99 + banana*0.16 + butterP*4.19;
         //Output Shopping list with cost//
         System.out.println("Shopping list for "+cookieCount+" cookie(s)"+" and "+loafCount+" loaf(s) of bread:");
-        System.out.println();
-        System.out.println((int) Math.ceil(flourP) + " Bag(s) of flour");
-        System.out.println((int) Math.ceil(saltP) + " package(s) of salt");
-        System.out.println((int) Math.ceil(baking_sodaP) + " box(es) of baking soda");
-        System.out.println((int) Math.ceil(vanillaP) + " bottles of vanilla");
-        System.out.println((int) Math.ceil(eggsP) +" Carton(s) of eggs");
-        System.out.println((int) Math.ceil(sugarP)  +" bag(s) of sugar");
-        System.out.println((int) Math.ceil(butterP) +" package(s) of butter");
+        System.out.println((int) flourP + " Bag(s) of flour");
+        System.out.println((int)saltP + " package(s) of salt");
+        System.out.println((int)baking_sodaP + " box(es) of baking soda");
+        System.out.println((int)vanillaP + " bottle(s) of vanilla extract");
+        System.out.println((int)eggsP +" Carton(s) of eggs");
+        System.out.println((int)sugarP  +" bag(s) of sugar");
+        System.out.println((int)butterP +" package(s) of butter");
         System.out.println((int) banana +" banana(s)");
-        System.out.println((int) Math.ceil(chipsP) +" bag(s) of chocolate chips");
+        System.out.println((int)chipsP +" bag(s) of chocolate chips");
         System.out.println();  
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         System.out.println("Total cost: " + formatter.format(cost));
